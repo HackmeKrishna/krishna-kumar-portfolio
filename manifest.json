@@ -1,0 +1,18 @@
+{
+  "name": "Krishna Kumar — Senior Software Engineer",
+  "short_name": "Krishna Kumar",
+  "description": "Portfolio of Krishna Kumar, a senior software engineer specializing in geospatial systems, backend platforms, and agentic AI.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07060A",
+  "theme_color": "#07060A",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

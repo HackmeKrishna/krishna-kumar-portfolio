@@ -1,0 +1,45 @@
+/* ==========================================================================
+   animations.css — keyframes and motion, isolated so they're easy to tune
+   ========================================================================== */
+
+@keyframes driftA{0%{transform:translate(0,0) scale(1);}100%{transform:translate(8vw,10vw) scale(1.15);}}
+@keyframes driftB{0%{transform:translate(0,0) scale(1);}100%{transform:translate(-9vw,-6vw) scale(1.1);}}
+@keyframes driftC{0%{transform:translate(-6vw,4vw) scale(1);opacity:0.12;}100%{transform:translate(6vw,-8vw) scale(1.25);opacity:0.22;}}
+#ambient-bg .b1{animation:driftA 26s ease-in-out infinite alternate;}
+#ambient-bg .b2{animation:driftB 32s ease-in-out infinite alternate;}
+#ambient-bg .b3{animation:driftC 40s ease-in-out infinite alternate;}
+
+@keyframes spinRing{to{transform:rotate(360deg);}}
+
+@keyframes floatBadge{
+  0%,100%{transform:translate(-50%,-50%) translateY(0);}
+  50%{transform:translate(-50%,-50%) translateY(-10px);}
+}
+
+@keyframes accentShift{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
+
+@keyframes caretBlink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+@keyframes pulseGlow{0%,100%{opacity:0.65;}50%{opacity:1;}}
+
+@keyframes travelDown{
+  0%{top:0%;opacity:0;}
+  5%{opacity:1;}
+  92%{opacity:1;}
+  100%{top:100%;opacity:0;}
+}
+
+/* survey-mark network background pulses (drawn in JS onto #contour-bg) */
+@keyframes markPulse{
+  0%,100%{opacity:.35;}
+  50%{opacity:.9;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .reveal{transition:none;opacity:1;transform:none;}
+  #contour-bg{display:none;}
+  #ambient-bg span, .avatar-wrap::before, .hero-role-line #roleType, .journey-arrow, .ai-badge, .hero-role-line .caret, .orbit-item{animation:none;}
+  .stack-bar .fill{transition:none;}
+  #heroCanvas, #trailCanvas{display:none;}
+}

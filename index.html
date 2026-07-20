@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Krishna Kumar — Senior Software Engineer, GIS &amp; AI Specialist</title>
+<meta name="description" content="Krishna Kumar is a senior software engineer with 3+ years building geospatial platforms, backend systems, and agentic AI at Unicloud Labs. Explore his work, skills, and projects.">
+<meta name="keywords" content="Krishna Kumar, Senior Software Engineer, Backend Engineer, AI Engineer, LLM Developer, GIS Specialist, Cloud Architect, Spring Boot, PostGIS, Agentic AI, Unicloud Labs, New Delhi">
+<meta name="author" content="Krishna Kumar">
+<link rel="canonical" href="https://krishnakumar.dev/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07060A">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Krishna Kumar — Senior Software Engineer, GIS &amp; AI Specialist">
+<meta property="og:description" content="3+ years building geospatial platforms, backend systems, and agentic AI. Currently building Unistack AI at Unicloud Labs.">
+<meta property="og:url" content="https://krishnakumar.dev/">
+<meta property="og:site_name" content="Krishna Kumar">
+<meta property="og:image" content="https://krishnakumar.dev/images/avatar-krishna-kumar.webp">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Krishna Kumar — Senior Software Engineer, GIS &amp; AI Specialist">
+<meta name="twitter:description" content="3+ years building geospatial platforms, backend systems, and agentic AI. Currently building Unistack AI at Unicloud Labs.">
+<meta name="twitter:image" content="https://krishnakumar.dev/images/avatar-krishna-kumar.webp">
+
+<!-- Icons / manifest -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Structured data: lives in the HTML directly (not injected by JS) so
+     crawlers see it without executing anything. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Krishna Kumar",
+  "url": "https://krishnakumar.dev/",
+  "image": "https://krishnakumar.dev/images/avatar-krishna-kumar.webp",
+  "jobTitle": "Senior Software Engineer",
+  "email": "mailto:123guptakrishna@gmail.com",
+  "telephone": "+91-77810-04514",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New Delhi",
+    "addressCountry": "IN"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Unicloud Labs Pvt Ltd"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Noida Institute of Engineering & Technology"
+  },
+  "sameAs": [
+    "https://github.com/HackmeKrishna",
+    "https://linkedin.com/in/hackmekrish"
+  ],
+  "knowsAbout": ["Backend Engineering", "Geographic Information Systems", "Agentic AI", "Cloud Architecture", "LLM Development"]
+}
+</script>
+</head>
+<body>
+
+<div id="ambient-bg"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+<div id="spotlight"></div>
+<svg id="contour-bg" xmlns="http://www.w3.org/2000/svg"></svg>
+<canvas id="trailCanvas" aria-hidden="true"></canvas>
+<div id="coord-readout">28.6139° N · 77.2090° E</div>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><span class="dot"></span><b>KRISHNA KUMAR</b><span>/ SSE</span></div>
+    <div class="navlinks">
+      <button type="button" data-scroll-to="work">Work</button>
+      <button type="button" data-scroll-to="skills">Skills</button>
+      <button type="button" data-scroll-to="ai">AI / LLM</button>
+      <button type="button" data-scroll-to="projects">Projects</button>
+      <button type="button" data-scroll-to="achievements">Achievements</button>
+      <button type="button" data-scroll-to="recognition">Recognition</button>
+      <button type="button" data-scroll-to="education">Education</button>
+      <button type="button" data-scroll-to="contact">Contact</button>
+    </div>
+    <div class="nav-right">
+      <button id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap" style="border-top:none;">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero-text">
+      <div class="eyebrow">New Delhi, India · Available for opportunities</div>
+      <h1 class="reveal">I am a Senior Software Engineer specializing as a
+        <span class="hero-role-line"><span id="roleType"></span><span class="caret" aria-hidden="true"></span></span>
+      </h1>
+      <p class="hero-sub reveal">Senior software engineer with 3+ years turning large, messy geospatial datasets into fast, production-grade systems. Currently building Unistack AI, an agentic AI platform, at Unicloud Labs.</p>
+      <div class="hero-actions reveal">
+        <a class="btn" href="mailto:123guptakrishna@gmail.com">Get in touch</a>
+        <a class="btn ghost" href="https://github.com/HackmeKrishna" target="_blank" rel="noopener">View GitHub ↗</a>
+        <a class="btn ghost" href="https://linkedin.com/in/hackmekrish" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="hero-meta reveal">
+        <div><div class="num">35%</div><div class="lbl">Query perf. gain</div></div>
+        <div><div class="num">3+</div><div class="lbl">Years experience</div></div>
+        <div><div class="num">5</div><div class="lbl">Production platforms</div></div>
+      </div>
+    </div>
+    <div class="avatar-stage reveal">
+      <div class="orbit-wrap" aria-hidden="true">
+        <span class="orbit-item" style="left:50.0%; top:7.0%; animation-delay:0s; animation-duration:5.5s;">Java</span>
+        <span class="orbit-item" style="left:71.5%; top:12.76%; animation-delay:.35s; animation-duration:6.1s;">Spring Boot</span>
+        <span class="orbit-item" style="left:87.24%; top:28.5%; animation-delay:.7s; animation-duration:6.7s;">.NET</span>
+        <span class="orbit-item" style="left:93.0%; top:50.0%; animation-delay:1.05s; animation-duration:7.3s;">PostgreSQL</span>
+        <span class="orbit-item" style="left:87.24%; top:71.5%; animation-delay:1.4s; animation-duration:5.5s;">PostGIS</span>
+        <span class="orbit-item" style="left:71.5%; top:87.24%; animation-delay:1.75s; animation-duration:6.1s;">Docker</span>
+        <span class="orbit-item" style="left:50.0%; top:93.0%; animation-delay:0s; animation-duration:6.7s;">Kubernetes</span>
+        <span class="orbit-item" style="left:28.5%; top:87.24%; animation-delay:.35s; animation-duration:7.3s;">Azure</span>
+        <span class="orbit-item" style="left:12.76%; top:71.5%; animation-delay:.7s; animation-duration:5.5s;">MongoDB</span>
+        <span class="orbit-item" style="left:7.0%; top:50.0%; animation-delay:1.05s; animation-duration:6.1s;">Redis</span>
+        <span class="orbit-item" style="left:12.76%; top:28.5%; animation-delay:1.4s; animation-duration:6.7s;">Angular</span>
+        <span class="orbit-item" style="left:28.5%; top:12.76%; animation-delay:1.75s; animation-duration:7.3s;">Kafka</span>
+      </div>
+      <div class="avatar-wrap">
+        <img src="images/avatar-krishna-kumar.webp" width="220" height="220" alt="Krishna Kumar" loading="eager" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-title"><span class="coord">§ 01 — LEGEND</span>Skills &amp; Tools</div>
+      </div>
+      <div class="legend-grid reveal">
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--contour)"></span><h3>Languages</h3></div>
+          <p>Java, Kotlin, JavaScript, C#, SQL</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--beacon)"></span><h3>Backend</h3></div>
+          <p>Spring Boot, Spring Data JPA, Hibernate, .NET, NestJS</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--ivory)"></span><h3>Frontend</h3></div>
+          <p>Angular, HTML, CSS, Bootstrap, Tailwind CSS, Vite</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--contour)"></span><h3>Databases</h3></div>
+          <p>PostgreSQL, PostGIS, MongoDB, MySQL</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--beacon)"></span><h3>Caching &amp; Messaging</h3></div>
+          <p>Redis, Apache Kafka</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--ivory)"></span><h3>DevOps &amp; CI/CD</h3></div>
+          <p>Docker, Kubernetes, Jenkins</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--contour)"></span><h3>Testing</h3></div>
+          <p>JMeter, Playwright</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--beacon)"></span><h3>Tools</h3></div>
+          <p>Git, Postman, GeoServer, QGIS, Android Studio</p>
+        </div>
+        <div class="legend-cell">
+          <div class="key"><span class="swatch" style="background:var(--ivory)"></span><h3>AI &amp; Agentic Tools</h3></div>
+          <p>Agentic AI, LLM/VLM Routing, Vector Search (MongoDB), RBAC, SSO, Agents/Skills/Tools frameworks</p>
+        </div>
+      </div>
+
+      <div class="stack-block reveal">
+        <div class="stack-head">Core stack — self-assessed proficiency</div>
+        <div class="stack-bars">
+          <div class="stack-bar">
+            <span class="name">Java / Spring Boot</span>
+            <span class="track"><span class="fill" data-pct="92"></span></span>
+            <span class="pct">92%</span>
+          </div>
+          <div class="stack-bar">
+            <span class="name">PostgreSQL / PostGIS</span>
+            <span class="track"><span class="fill" data-pct="90"></span></span>
+            <span class="pct">90%</span>
+          </div>
+          <div class="stack-bar">
+            <span class="name">.NET / C#</span>
+            <span class="track"><span class="fill" data-pct="78"></span></span>
+            <span class="pct">78%</span>
+          </div>
+          <div class="stack-bar">
+            <span class="name">Angular</span>
+            <span class="track"><span class="fill" data-pct="80"></span></span>
+            <span class="pct">80%</span>
+          </div>
+          <div class="stack-bar">
+            <span class="name">Docker / Kubernetes</span>
+            <span class="track"><span class="fill" data-pct="76"></span></span>
+            <span class="pct">76%</span>
+          </div>
+          <div class="stack-bar">
+            <span class="name">Agentic AI / LLM Routing</span>
+            <span class="track"><span class="fill" data-pct="68"></span></span>
+            <span class="pct">68%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbelt reveal" aria-label="Tools used day to day">
+        <span class="tool"><span class="dot"></span>Spring Boot</span>
+        <span class="tool"><span class="dot"></span>PostGIS</span>
+        <span class="tool"><span class="dot"></span>GeoServer</span>
+        <span class="tool"><span class="dot"></span>QGIS</span>
+        <span class="tool"><span class="dot"></span>Docker</span>
+        <span class="tool"><span class="dot"></span>Kubernetes</span>
+        <span class="tool"><span class="dot"></span>Azure Blob Storage</span>
+        <span class="tool"><span class="dot"></span>Apache Kafka</span>
+        <span class="tool"><span class="dot"></span>Redis</span>
+        <span class="tool"><span class="dot"></span>MongoDB Vector Search</span>
+        <span class="tool"><span class="dot"></span>Angular</span>
+        <span class="tool"><span class="dot"></span>Cesium &amp; Leaflet</span>
+        <span class="tool"><span class="dot"></span>Kotlin</span>
+        <span class="tool"><span class="dot"></span>Android Studio</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap">
+      <div class="sec-head reveal" style="display:block;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap;">
+          <span class="coord" style="margin-bottom:0;">§ 01.5 — SIGNAL</span>
+          <span class="ai-badge"><span class="dot"></span>Currently building</span>
+        </div>
+        <div class="sec-title">AI &amp; LLM Engineering</div>
+        <p style="color:var(--fog); max-width:60ch; margin-top:14px; font-size:14.5px;">
+          At Unicloud Labs, I'm currently building <strong style="color:var(--chalk)">Unistack AI</strong> — an agentic AI platform spanning multi-agent orchestration, vector search, and LLM/VLM routing.
+        </p>
+      </div>
+      <div class="ai-grid reveal">
+        <div class="ai-card">
+          <div class="icon" style="background:rgba(79,184,168,0.14); color:var(--contour);">◎</div>
+          <h4>Agentic AI</h4>
+          <p>Designing autonomous agent workflows and tool-use loops.</p>
+        </div>
+        <div class="ai-card">
+          <div class="icon" style="background:rgba(232,163,61,0.14); color:var(--beacon);">◈</div>
+          <h4>Multi-agent systems</h4>
+          <p>Agent orchestration, task delegation, inter-agent communication.</p>
+        </div>
+        <div class="ai-card">
+          <div class="icon" style="background:rgba(241,234,224,0.14); color:var(--ivory);">▤</div>
+          <h4>Vector databases</h4>
+          <p>Similarity search and embedding pipelines for retrieval.</p>
+        </div>
+        <div class="ai-card">
+          <div class="icon" style="background:rgba(79,184,168,0.14); color:var(--contour);">⇄</div>
+          <h4>LLM / VLM routing</h4>
+          <p>Cost- and latency-aware routing across language and vision-language models.</p>
+        </div>
+        <div class="ai-card">
+          <div class="icon" style="background:rgba(232,163,61,0.14); color:var(--beacon);">▥</div>
+          <h4>RAG pipelines</h4>
+          <p>Retrieval-augmented generation over large document and geospatial corpora.</p>
+        </div>
+        <div class="ai-card">
+          <div class="icon" style="background:rgba(241,234,224,0.14); color:var(--ivory);">✎</div>
+          <h4>Prompt &amp; context engineering</h4>
+          <p>Structured prompting, context management, evaluation loops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-title"><span class="coord">§ 02 — ROUTE</span>Experience</div>
+      </div>
+
+      <div class="route">
+        <div class="route-rail"></div>
+        <div class="route-fill"></div>
+        <div class="journey-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3 L12 18 M12 18 L6 12 M12 18 L18 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="color:var(--beacon)"/>
+          </svg>
+        </div>
+        <div class="waypoint reveal">
+          <div class="role-row">
+            <h3>Senior Software Engineer</h3>
+            <span class="period">Jul 2023 — Present</span>
+          </div>
+          <div class="org">Unicloud Labs Pvt Ltd · Noida, UP</div>
+
+          <div class="subprojects-grid">
+            <div class="subproject" style="border-left-color:var(--beacon);">
+              <h4>Unistack AI <span class="ai-badge" style="margin-left:8px; vertical-align:middle;"><span class="dot"></span>Currently building</span></h4>
+              <ul>
+                <li>Designing role-based access control (RBAC) for multi-tenant agent access</li>
+                <li>Building an LLM/VLM router for cost- and latency-aware model selection</li>
+                <li>Vector search layer on MongoDB for embeddings and retrieval</li>
+                <li>SSO integration for authentication across the platform</li>
+                <li>Framework for agents, skills, and tools — composable agentic AI building blocks</li>
+              </ul>
+            </div>
+            <div class="subproject">
+              <h4>GNDB — Geographic Names Database</h4>
+              <ul>
+                <li>Built role-based Admin, Vendor &amp; Super Admin dashboards with secure auth</li>
+                <li>Engineered scalable REST APIs in Spring Boot for geospatial data management</li>
+                <li>Optimized PostgreSQL/PostGIS queries and indexing — 35% performance gain</li>
+                <li>Processed large-scale GIS datasets with QGIS and GeoServer</li>
+                <li>Integrated the Bhashini API for multilingual support</li>
+              </ul>
+            </div>
+            <div class="subproject" style="border-left-color:var(--ivory);">
+              <h4>GNDB — Android Application</h4>
+              <ul>
+                <li>Developed the GNDB Android app in Kotlin using Android Studio, as part of the field data-collection team</li>
+                <li>Built an offline-first data sync layer so field surveyors can capture geographic names data with no network connectivity</li>
+                <li>Implemented local caching and background sync for low-bandwidth rural network conditions</li>
+                <li>Coordinated with the backend team to align the mobile sync contract with the GNDB REST APIs</li>
+              </ul>
+            </div>
+            <div class="subproject">
+              <h4>AMRUT 2.0 — Urban Transformation Platform</h4>
+              <ul>
+                <li>Full-stack geospatial platform with secure role-based access control</li>
+                <li>DEM &amp; orthomosaic visualization using Cesium and Leaflet</li>
+                <li>Managed large-scale spatial datasets across PostgreSQL, PostGIS, GeoServer</li>
+                <li>Azure Blob Storage for scalable file management</li>
+                <li>Containerized and deployed with Docker</li>
+              </ul>
+            </div>
+            <div class="subproject">
+              <h4>IndiaMaps.gov.in</h4>
+              <ul>
+                <li>Backend data ingestion pipelines for large-scale geospatial datasets</li>
+                <li>Optimized 2D map visualization features with GIS tooling</li>
+                <li>Integrated spatial datasets with PostgreSQL/PostGIS</li>
+                <li>REST APIs serving map layers and geospatial data dynamically</li>
+                <li>Improved rendering performance and data accuracy</li>
+              </ul>
+            </div>
+            <div class="subproject">
+              <h4>IRGVAP — CRIS Railway Video Analytics</h4>
+              <ul>
+                <li>Secure admin and vendor modules for railway video data</li>
+                <li>Configured media server, optimized video processing workflows</li>
+                <li>Improved file processing efficiency through backend optimization</li>
+              </ul>
+            </div>
+            <div class="subproject">
+              <h4>Smartlabs.pro</h4>
+              <ul>
+                <li>Alert management system and reporting dashboards for infra monitoring</li>
+                <li>Cloud API integration for VM orchestration &amp; provisioning</li>
+                <li>Async task processing via Pub/Sub messaging</li>
+                <li>API/UI testing with JMeter and Playwright</li>
+                <li>Recognized with the "Game Changer" award for high-impact work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="waypoint reveal">
+          <div class="role-row">
+            <h3>Software Engineer Intern</h3>
+            <span class="period">Jan 2023 — May 2023</span>
+          </div>
+          <div class="org">PayNet Systems Ltd</div>
+          <div class="subproject" style="margin-top:20px;">
+            <ul>
+              <li>Developed REST APIs using Spring Boot and MySQL</li>
+              <li>Assisted in Docker-based deployment pipelines</li>
+              <li>Contributed to backend documentation and testing workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-title"><span class="coord">§ 02.5 — SIDE QUESTS</span>Personal Projects</div>
+      </div>
+      <div class="project-grid reveal">
+        <div class="project-card">
+          <div class="proj-rule"></div>
+          <div class="proj-inner">
+            <div class="proj-top">
+              <span class="proj-tag">Practice Platform</span>
+              <span class="proj-sheet-no">SHEET 01</span>
+            </div>
+            <h4>Do Practice</h4>
+            <p>A free practice platform built for students and self-learners to sharpen their skills — built and shipped independently, outside of work.</p>
+            <div class="proj-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="proj-actions">
+              <a class="primary" href="https://do-practice.netlify.app/" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="proj-rule" style="background:repeating-linear-gradient(90deg, var(--beacon) 0 10px, transparent 10px 16px);"></div>
+          <div class="proj-inner">
+            <div class="proj-top">
+              <span class="proj-tag" style="color:var(--contour);">Kids' Learning App</span>
+              <span class="proj-sheet-no">SHEET 02</span>
+            </div>
+            <h4>HeyyBaby</h4>
+            <p>A playful learning app for kids, designed to make early learning feel like play — a personal project built for a younger audience.</p>
+            <div class="proj-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="proj-actions">
+              <a class="primary" href="https://heyy-baby.netlify.app/" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-title"><span class="coord">§ 03 — SURVEY MARKS</span>Key Achievements</div>
+      </div>
+      <div class="achieve-list reveal">
+        <div class="achieve-item">
+          <span class="mark">✦</span>
+          <p><strong>"Game Changer of the Year"</strong> at Unicloud Labs (Apr 2026), for high-impact geospatial solutions and system performance work.</p>
+        </div>
+        <div class="achieve-item">
+          <span class="mark">✦</span>
+          <p>Improved geospatial query performance by <strong>35%</strong> through targeted PostGIS optimization.</p>
+        </div>
+        <div class="achieve-item">
+          <span class="mark">✦</span>
+          <p>Designed a <strong>scalable microservices architecture</strong> for GIS-based applications.</p>
+        </div>
+        <div class="achieve-item">
+          <span class="mark">✦</span>
+          <p>Built <strong>production-grade REST APIs</strong> handling large-scale datasets.</p>
+        </div>
+        <div class="achieve-item">
+          <span class="mark">✦</span>
+          <p>Implemented <strong>asynchronous processing</strong> using messaging queues for high-throughput workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-title"><span class="coord">§ 03.5 — MARKER</span>Recognition</div>
+      </div>
+      <div class="cert-frame reveal">
+        <img src="images/cert-game-changer-unicloud.jpg" width="640" height="480" loading="lazy" alt="Unicloud Labs Game Changer of the Year certificate, awarded to Krishna Kumar">
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <img src="images/cert-codefever-quiz.webp" width="400" height="300" loading="lazy" alt="Certificate of Appreciation for organizing Codefever technical quiz">
+          <div class="cert-body">
+            <h4>Codefever — Technical Quiz</h4>
+            <p>Organized Codefever, a technical quiz event, during my MCA at NIET Greater Noida (Sep 2022).</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <img src="images/cert-toycathon-coordinator.webp" width="400" height="300" loading="lazy" alt="Student Coordinator certificate for Toycathon Physical Edition">
+          <div class="cert-body">
+            <h4>Toycathon — Student Coordinator</h4>
+            <p>Served as Student Coordinator for Toycathon (Physical Edition), a Ministry of Education Innovation Cell initiative.</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <img src="images/cert-sih-2022-volunteer.webp" width="400" height="300" loading="lazy" alt="Volunteer certificate for Smart India Hackathon 2022">
+          <div class="cert-body">
+            <h4>Smart India Hackathon 2022</h4>
+            <p>Volunteered at the SIH 2022 Grand Finale, a nationwide innovation initiative by the Ministry of Education.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-title"><span class="coord">§ 04 — ORIGIN POINT</span>Education</div>
+      </div>
+      <div class="edu-card reveal">
+        <div>
+          <h3>Master of Computer Applications (MCA)</h3>
+          <div class="sub">Noida Institute of Engineering &amp; Technology (NIET), Dr. A.P.J. Abdul Kalam Technical University · Greater Noida, UP · Jun 2023</div>
+        </div>
+        <div class="cgpa">8.7<span>CGPA</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Let's build something that scales.</h2>
+    <p class="lede reveal">Open to senior software engineering and backend roles — especially where geospatial data, performance, and distributed systems meet.</p>
+
+    <div class="contact-grid reveal">
+      <a class="contact-tile" href="mailto:123guptakrishna@gmail.com">
+        <span class="ct-icon" aria-hidden="true">✉</span>
+        <span class="ct-label">Email me</span>
+        <span class="ct-sub">123guptakrishna@gmail.com</span>
+      </a>
+      <a class="contact-tile" href="tel:+917781004514">
+        <span class="ct-icon" aria-hidden="true">☎</span>
+        <span class="ct-label">Call</span>
+        <span class="ct-sub">+91 77810 04514</span>
+      </a>
+      <a class="contact-tile" href="https://github.com/HackmeKrishna" target="_blank" rel="noopener">
+        <span class="ct-icon" aria-hidden="true">⌥</span>
+        <span class="ct-label">GitHub</span>
+        <span class="ct-sub">@HackmeKrishna</span>
+      </a>
+      <a class="contact-tile" href="https://linkedin.com/in/hackmekrish" target="_blank" rel="noopener">
+        <span class="ct-icon" aria-hidden="true">in</span>
+        <span class="ct-label">LinkedIn</span>
+        <span class="ct-sub">/in/hackmekrish</span>
+      </a>
+    </div>
+
+    <div class="footbadges">
+      <span>Built with HTML · CSS · Vanilla JS</span>
+      <span>No frameworks, no build step</span>
+      <span>SEO &amp; OG tags included</span>
+    </div>
+
+    <div class="footbar">
+      <span>KRISHNA KUMAR © 2026</span>
+      <span>28.6139° N, 77.2090° E — NEW DELHI, INDIA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/seo.js"></script>
+
+</body>
+</html>

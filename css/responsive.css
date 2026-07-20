@@ -1,0 +1,44 @@
+/* ==========================================================================
+   responsive.css
+   ========================================================================== */
+
+@media (max-width:900px){
+  .stack-bars{grid-template-columns:1fr;}
+}
+
+@media (max-width:1180px) and (min-width:721px){
+  .avatar-stage{width:320px;height:320px;}
+  .avatar-wrap{width:180px;height:180px;}
+  .orbit-item{font-size:10.5px;padding:5px 10px;}
+}
+
+@media (max-width:720px){
+  .navlinks{display:none;}
+  #navToggle{display:block;}
+  .hero{flex-direction:column-reverse;text-align:left;}
+  .avatar-stage{width:280px;height:280px;align-self:flex-start;}
+  .avatar-wrap{width:150px;height:150px;}
+  .orbit-item{font-size:10px;padding:5px 9px;}
+}
+
+@media (max-width:480px){
+  .orbit-item{display:none;}
+  .avatar-stage{width:150px;height:150px;}
+  .avatar-wrap{width:150px;height:150px;}
+}
+
+/* In-app browsers (WhatsApp, Instagram, etc.) tend to render at narrow,
+   sometimes unpredictable widths — make sure nothing forces a horizontal
+   scrollbar by letting these two nowrap elements wrap normally. */
+@media (max-width:560px){
+  .waypoint .period{white-space:normal;}
+  .waypoint .role-row{flex-direction:column;align-items:flex-start;gap:4px;}
+}
+
+@media (max-width:600px){
+  .hero-meta{grid-template-columns:1fr;}
+  .edu-card{flex-direction:column;align-items:flex-start;}
+  .edu-card .cgpa{text-align:left;}
+  .stack-bar{grid-template-columns:100px 1fr 34px;gap:10px;}
+  .footbar{flex-direction:column;align-items:flex-start;}
+}
